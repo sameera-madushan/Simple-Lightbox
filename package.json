@@ -1,11 +1,13 @@
 {
-  "name": "simple_lightbox",
+  "name": "@sameera_madushan/simple_lightbox",
   "version": "1.0.0",
   "description": "A simple and customizable lightbox library in TypeScript",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/simple_lightbox.cjs.js", 
+  "module": "dist/simple_lightbox.es.js",
+  "types": "dist/simple_lightbox.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "vite build",
+    "dev": "vite build --watch",
     "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +15,10 @@
     "type": "git",
     "url": "git+https://github.com/sameera-madushan/Simple-Lightbox.git"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "keywords": [
     "lightbox",
     "typescript",
@@ -26,6 +32,9 @@
   },
   "homepage": "https://github.com/sameera-madushan/Simple-Lightbox#readme",
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "@types/node": "^25.0.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.0",
+    "vite-plugin-dts": "^4.5.4"
   }
 }
