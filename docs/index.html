@@ -119,10 +119,12 @@
   <script src="https://cdn.jsdelivr.net/npm/@sameera_madushan/simple_lightbox/dist/simple_lightbox.umd.js"></script>
 
   <script>
-    const lb = new SimpleLightbox.Lightbox('.gallery img', {
-      overlayColor: 'rgba(0,0,0,0.9)',
-      closeButton: true,
-      animationDuration: 500
+    document.addEventListener('DOMContentLoaded', () => {
+      const lb = new SimpleLightbox.Lightbox('.gallery img', {
+        overlayColor: 'rgba(0,0,0,0.9)',
+        closeButton: true,
+        animationDuration: 500
+      });
     });
   </script>
   
