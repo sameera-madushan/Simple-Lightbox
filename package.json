@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple and customizable lightbox library in TypeScript",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts", 
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
@@ -13,7 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/sameera-madushan/Simple-Lightbox.git"
   },
-  "keywords": ["lightbox", "typescript", "image gallery", "simple"],
+  "keywords": [
+    "lightbox",
+    "typescript",
+    "image gallery",
+    "simple"
+  ],
   "author": "Sameera Madushan",
   "license": "MIT",
   "bugs": {
@@ -21,7 +26,6 @@
   },
   "homepage": "https://github.com/sameera-madushan/Simple-Lightbox#readme",
   "devDependencies": {
-    "@types/node": "^25.0.3",
     "typescript": "^5.9.3"
   }
 }
