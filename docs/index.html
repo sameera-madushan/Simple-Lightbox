@@ -6,7 +6,10 @@
 
   <title>Simple Lightbox</title>
 
-  <link rel="stylesheet" href="../src/lightbox.css">
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/@sameera_madushan/simple_lightbox/dist/simple_lightbox.css"
+  />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://preline.co/assets/css/main.css?v=3.0.1">
 </head>
@@ -32,7 +35,7 @@
         </p>
 
         <p class="mt-3 text-sm text-gray-600 dark:text-neutral-400">
-            Built to be intuitive and easy to use, Simple Lightbox lets your images shine without any unnecessary complexity—just click and enjoy.
+            Built to be intuitive and easy to use, Simple Lightbox lets your images shine without any unnecessary complexity. Just click and enjoy.
         </p>
       </div>
 
@@ -113,15 +116,15 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/preline/dist/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@sameera_madushan/simple_lightbox/dist/simple_lightbox.umd.js"></script>
 
-  <script type="module"> 
-    import { Lightbox } from '../dist/simple_lightbox.es.js'; 
-    
-    new Lightbox('.gallery img', 
-      { overlayColor: 'rgba(0,0,0,0.9)', 
-        closeButton: true, 
-        animationDuration: 500 
-      }); 
+  <script>
+    const lb = new SimpleLightbox.Lightbox('.gallery img', {
+      overlayColor: 'rgba(0,0,0,0.9)',
+      closeButton: true,
+      animationDuration: 500
+    });
   </script>
+  
 </body>
 </html>
