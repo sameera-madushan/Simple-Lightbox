@@ -1,0 +1,50 @@
+/* Overlay */
+.slb-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Image base */
+.slb-img {
+  max-width: 90%;
+  max-height: 90%;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Close button */
+.slb-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navigation */
+.slb-prev,
+.slb-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.slb-prev { left: 20px; }
+.slb-next { right: 20px; }
