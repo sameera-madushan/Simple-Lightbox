@@ -110,12 +110,14 @@ Use this in Node.js or in a browser with a bundler like Webpack, Parcel, or Brow
 | `overlayColor`      | string  | ""      | Background color of the lightbox overlay    |
 | `closeButton`       | boolean | true    | Show close button                           |
 | `keyboard`          | boolean | true    | Allow keyboard navigation (Esc, Arrow keys) |
+| `navigation`        | boolean | true    | Show previous/next navigation buttons on the lightbox |
 
 ## Methods
 
 | Method              | Parameters  | Description                                 |
 | ------------------- | -------     | ------------------------------------------- |
 | `destroy()`      | none        | Permanently removes the lightbox, clears event listeners, and frees memory. Useful for single-page applications or dynamic content.    |
+
 
 
 
