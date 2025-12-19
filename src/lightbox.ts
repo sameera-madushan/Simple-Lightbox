@@ -17,7 +17,6 @@ export class Lightbox {
     overlayColor: "",
     closeButton: true,
     keyboard: true,
-    navigation: true,
   };
 
   constructor(selector: string, options: LightboxOptions = {}) {
@@ -45,7 +44,7 @@ export class Lightbox {
     return el;
   }
 
-  /* ---------- open / close / destroy ---------- */
+  /* ---------- open / close ---------- */
 
   private open(i: number) {
     this.index = i;
@@ -57,7 +56,7 @@ export class Lightbox {
 
     if (this.options.closeButton) this.overlay.append(this.button("slb-close", svg.close, this.close));
 
-    if (this.options.navigation && this.images.length > 1) {
+    if (this.images.length > 1) {
       this.overlay.append(this.nav("slb-prev", -1), this.nav("slb-next", 1));
     }
 
@@ -71,20 +70,6 @@ export class Lightbox {
     document.removeEventListener("keydown", this.onKey);
     setTimeout(() => (this.overlay.style.display = "none"), this.animationDuration);
   };
-
-  public destroy() {
-
-    if (this.overlay.parentNode) {
-      this.overlay.parentNode.removeChild(this.overlay);
-    }
-
-    document.removeEventListener("keydown", this.onKey);
-    this.images.forEach(img => (img.onclick = null));
-
-    this.images = [];
-    this.imgEl = null!;
-  }
-
 
   /* ---------- elements ---------- */
 
