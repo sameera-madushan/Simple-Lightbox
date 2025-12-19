@@ -18,6 +18,10 @@ All pre-built files needed to use Tom Select can be found in the "dist" folder f
 npm i @sameera_madushan/simple_lightbox
 ```
 
+```bash
+pnpm add @sameera_madushan/simple_lightbox
+```
+
 ### jsDelivr
 
 The fastest way to add Simple Lightbox into your project is to just include the js and css from jsDelivr.
@@ -35,11 +39,16 @@ Clone the full repo from GitHub to create custom builds. Use ```npm run build```
 
 ## Usage
 
-### 1. UMD Build (Browser)
+### 1. UMD Build
 
 ```html
-<link rel="stylesheet" href="../dist/simple_lightbox.css">
-<script src="../dist/simple_lightbox.umd.js"></script>
+<link 
+  rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/@sameera_madushan/simple_lightbox/dist/simple_lightbox.css" 
+/>
+<script 
+  src="https://cdn.jsdelivr.net/npm/@sameera_madushan/simple_lightbox/dist/simple_lightbox.umd.js">
+</script>
 
 <div class="gallery">
   <img src="./assets/img1.jpg">
@@ -58,11 +67,9 @@ Clone the full repo from GitHub to create custom builds. Use ```npm run build```
 ```
 Use this in browsers without modules. The SimpleLightbox object is globally available.
 
-### 2. ES Module Build (Modern Browsers)
+### 2. ES Module Build
 
 ```html
-<link rel="stylesheet" href="../dist/simple_lightbox.css">
-
 <div class="gallery">
   <img src="./assets/img1.jpg">
   <img src="./assets/img2.jpg">
@@ -70,7 +77,8 @@ Use this in browsers without modules. The SimpleLightbox object is globally avai
 </div>
 
 <script type="module">
-  import { Lightbox } from "../dist/simple_lightbox.es.js";
+  import { Lightbox } from "@sameera_madushan/simple_lightbox";
+  import "@sameera_madushan/simple_lightbox/dist/simple_lightbox.css";
 
   const lb = new Lightbox('.gallery img', {
     overlayColor: "rgba(0, 0, 0, 0.8)",
@@ -82,9 +90,10 @@ Use this in browsers without modules. The SimpleLightbox object is globally avai
 ```
 Use this for modern browsers with ```<script type="module">```
 
-### 3. CommonJS Build (Node / Bundlers)
+### 3. CommonJS Build
 ```javascript
-const { Lightbox } = require("../dist/simple_lightbox.cjs.js");
+const { Lightbox } = require("@sameera_madushan/simple_lightbox");
+require("@sameera_madushan/simple_lightbox/dist/simple_lightbox.css");
 
 const lb = new Lightbox('.gallery img', {
   overlayColor: "rgba(0, 0, 0, 0.8)",
@@ -101,4 +110,5 @@ Use this in Node.js or with bundlers like Webpack or Browserify.
 | `overlayColor`      | string  | ""      | Background color of the lightbox overlay    |
 | `closeButton`       | boolean | true    | Show close button                           |
 | `keyboard`          | boolean | true    | Allow keyboard navigation (Esc, Arrow keys) |
+
 
