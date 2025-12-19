@@ -111,5 +111,13 @@ Use this in Node.js or in a browser with a bundler like Webpack, Parcel, or Brow
 | `closeButton`       | boolean | true    | Show close button                           |
 | `keyboard`          | boolean | true    | Allow keyboard navigation (Esc, Arrow keys) |
 
+## Methods
+
+| Method              | Parameters  | Description                                 |
+| ------------------- | -------     | ------------------------------------------- |
+| `destroy()`      | none        | Permanently removes the lightbox, clears event listeners, and frees memory. Useful for single-page applications or dynamic content.    |
+
+
+
 
 
