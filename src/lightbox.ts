@@ -11,11 +11,11 @@ export class Lightbox {
   private overlay = this.createOverlay();
   private imgEl!: HTMLImageElement;
   private index = 0;
+  private animationDuration = 300;
 
   private options: Required<LightboxOptions> = {
     overlayColor: "",
     closeButton: true,
-    animationDuration: 300,
     keyboard: true,
   };
 
@@ -68,17 +68,31 @@ export class Lightbox {
   private close = () => {
     this.overlay.style.opacity = "0";
     document.removeEventListener("keydown", this.onKey);
-    setTimeout(() => (this.overlay.style.display = "none"), this.options.animationDuration);
+    setTimeout(() => (this.overlay.style.display = "none"), this.animationDuration);
   };
 
   /* ---------- elements ---------- */
 
   private createImage() {
     const img = document.createElement("img");
+    img.classList.add("slb-img");
+    const spinner = document.createElement("div");
+    spinner.className = "slb-spinner";
+    this.overlay.appendChild(spinner);
+
     img.src = this.images[this.index].src;
+    img.onload = () => {
+      spinner.remove();
+    };
+    img.onerror = () => {
+      spinner.remove();
+      img.alt = "Failed to load image";
+    };
+
     this.enableZoom(img);
     return img;
   }
+
 
   private button(cls: string, html: string, cb: () => void) {
     const b = document.createElement("button");

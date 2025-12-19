@@ -14,8 +14,8 @@
 
 /* Image base */
 .slb-img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 90vw;
+  max-height: 90vh;
   transition: transform 0.4s ease, opacity 0.4s ease;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
@@ -48,3 +48,18 @@
 
 .slb-prev { left: 20px; }
 .slb-next { right: 20px; }
+
+/* Spinner */
+.slb-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: slb-spin 1s linear infinite;
+  position: absolute;
+}
+
+@keyframes slb-spin {
+  to { transform: rotate(360deg); }
+}
