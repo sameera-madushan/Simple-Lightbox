@@ -1,6 +1,6 @@
 {
   "name": "@sameera_madushan/simple_lightbox",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple and customizable lightbox library in TypeScript",
   "main": "dist/simple_lightbox.cjs.js", 
   "module": "dist/simple_lightbox.es.js",
