@@ -88,7 +88,7 @@ Use this in browsers without modules. The SimpleLightbox object is globally avai
 </script>
 
 ```
-Use this for modern browsers with ```<script type="module">```
+Use this for modern browsers when using a bundler, or in frameworks like Next.js, Vite, or React. The bundler resolves the package imports and includes the CSS automatically.
 
 ### 3. CommonJS Build
 ```javascript
@@ -101,7 +101,7 @@ const lb = new Lightbox('.gallery img', {
   keyboard: true
 });
 ```
-Use this in Node.js or with bundlers like Webpack or Browserify.
+Use this in Node.js or in a browser with a bundler like Webpack, Parcel, or Browserify. Node itself cannot render the Lightbox, so this is mainly for bundler setups that target browsers.
 
 ## Options
 
@@ -110,5 +110,6 @@ Use this in Node.js or with bundlers like Webpack or Browserify.
 | `overlayColor`      | string  | ""      | Background color of the lightbox overlay    |
 | `closeButton`       | boolean | true    | Show close button                           |
 | `keyboard`          | boolean | true    | Allow keyboard navigation (Esc, Arrow keys) |
+
 
 
