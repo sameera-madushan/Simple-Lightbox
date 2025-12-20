@@ -4,6 +4,8 @@ Simple Lightbox is a minimalist and lightweight image viewer designed for effort
 
 Built to be intuitive and easy to use, Simple Lightbox lets your images shine without any unnecessary complexity. Just click and enjoy.
 
+![Image](https://github.com/user-attachments/assets/2f8f6b2f-dfbb-4f1b-8206-fca0ca5da0ab)
+
 ## Demo
 
 Visit the Simple Lightbox [homepage](https://sameera-madushan.github.io/Simple-Lightbox) to see demo.
@@ -117,6 +119,7 @@ Use this in Node.js or in a browser with a bundler like Webpack, Parcel, or Brow
 | Method              | Parameters  | Description                                 |
 | ------------------- | -------     | ------------------------------------------- |
 | `destroy()`      | none        | Permanently removes the lightbox, clears event listeners, and frees memory. Useful for single-page applications or dynamic content.    |
+
 
 
 
