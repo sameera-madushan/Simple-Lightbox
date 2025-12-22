@@ -12,6 +12,7 @@ export class Lightbox {
   private imgEl!: HTMLImageElement;
   private index = 0;
   private animationDuration = 300;
+  private scrollY = 0;
 
   private options: Required<LightboxOptions> = {
     overlayColor: "",
@@ -64,15 +65,19 @@ export class Lightbox {
     this.show();
     this.options.keyboard && document.addEventListener("keydown", this.onKey);
     this.imgEl.style.cursor = "zoom-in";
+    this.lockScroll();
   }
 
   private close = () => {
     this.overlay.style.opacity = "0";
+    this.unlockScroll();
     document.removeEventListener("keydown", this.onKey);
     setTimeout(() => (this.overlay.style.display = "none"), this.animationDuration);
   };
 
   public destroy() {
+
+    this.unlockScroll();
 
     if (this.overlay.parentNode) {
       this.overlay.parentNode.removeChild(this.overlay);
@@ -157,4 +162,18 @@ export class Lightbox {
       : e.key === "ArrowLeft"
       ? this.change(-1)
       : null;
+
+  private lockScroll() {
+    this.scrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${this.scrollY}px`;
+    document.body.style.width = "100%";
+  }
+
+  private unlockScroll() {
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
+    window.scrollTo(0, this.scrollY);
+  }
 }
