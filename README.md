@@ -14,14 +14,28 @@ Visit the Simple Lightbox [homepage](https://sameera-madushan.github.io/Simple-L
 
 All pre-built files needed to use Simple Lightbox can be found in the "dist" folder from each of these sources:              
 
-### [npm](https://www.npmjs.com/package/@sameera_madushan/simple_lightbox)
+### npm
 
 ```bash
 npm i @sameera_madushan/simple_lightbox
 ```
 
+### pnpm
+
 ```bash
 pnpm add @sameera_madushan/simple_lightbox
+```
+
+### yarn
+
+```bash
+yarn add @sameera_madushan/simple_lightbox
+```
+
+### bun
+
+```bash
+bun add @sameera_madushan/simple_lightbox
 ```
 
 ### jsDelivr
@@ -119,6 +133,7 @@ Use this in a browser environment with a bundler like Webpack, Parcel, or Browse
 | Method              | Parameters  | Description                                 |
 | ------------------- | -------     | ------------------------------------------- |
 | `destroy()`      | none        | Permanently removes the lightbox, clears event listeners, and frees memory. Useful for single-page applications or dynamic content.    |
+
 
 
 
