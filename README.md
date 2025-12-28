@@ -12,7 +12,7 @@ Visit the Simple Lightbox [homepage](https://sameera-madushan.github.io/Simple-L
 
 ## Installation
 
-All pre-built files needed to use Tom Select can be found in the "dist" folder from each of these sources:              
+All pre-built files needed to use Simple Lightbox can be found in the "dist" folder from each of these sources:              
 
 ### [npm](https://www.npmjs.com/package/@sameera_madushan/simple_lightbox)
 
@@ -103,7 +103,7 @@ const lb = new Lightbox('.gallery img', {
   keyboard: true
 });
 ```
-Use this in Node.js or in a browser with a bundler like Webpack, Parcel, or Browserify. Node itself cannot render the Lightbox, so this is mainly for bundler setups that target browsers.
+Use this in a browser environment with a bundler like Webpack, Parcel, or Browserify. Node.js alone cannot render the Lightbox, so this setup is intended for projects that bundle JavaScript for the browser.
 
 ## Options
 
@@ -119,6 +119,7 @@ Use this in Node.js or in a browser with a bundler like Webpack, Parcel, or Brow
 | Method              | Parameters  | Description                                 |
 | ------------------- | -------     | ------------------------------------------- |
 | `destroy()`      | none        | Permanently removes the lightbox, clears event listeners, and frees memory. Useful for single-page applications or dynamic content.    |
+
 
 
 
